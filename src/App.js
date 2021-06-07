@@ -3,7 +3,9 @@ import NavBar from './components/NavBar/NavBar';
 import './App.css';
 import Banner from './components/Banner/Banner';
 import RowPost from './components/RowPost/RowPost';
+import Foot from './components/Foot/Foot';
 import {originals,action, comedy, horror, romance, documentaries} from './urls'
+
 
 
 
@@ -18,6 +20,7 @@ function App() {
       <RowPost  url={horror}  title="Horror Movies" isSmall />
       <RowPost  url={romance}  title="Romantic Movies" isSmall />
       <RowPost  url={documentaries}  title="Documentaries" isSmall />
+      <Foot/>
     </div>
   )
 }
