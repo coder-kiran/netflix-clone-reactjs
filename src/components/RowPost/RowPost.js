@@ -33,8 +33,13 @@ function RowPost(props) {
             console.log(response.data.results[0].key)
             console.log("urlid state:- ",urlid);
             if (response.data.results.length !== 0) {
+                if(urlid){
+                    setUrlid("")
+                }else{
+                    setUrlid(response.data.results[0])
+                }
                 
-                setUrlid(response.data.results[0])
+               
                 
             } else {
                 console.log('array empty')
