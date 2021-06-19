@@ -1,26 +1,31 @@
 import React from 'react';
-import NavBar from './components/NavBar/NavBar';
 import './App.css';
-import Banner from './components/Banner/Banner';
-import RowPost from './components/RowPost/RowPost';
-import Foot from './components/Foot/Foot';
-import {originals,action, comedy, horror, romance, documentaries} from './urls'
+import HomePage from './Pages/Home/Home';
+import MainPage from './Pages/Main/Main';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Tsting from './components/Tsiting/Tsting';
+
+
 
 
 
 
 function App() {
-  return(
+  return (
     <div className="app">
-      <NavBar/>
-      <Banner/>
-      <RowPost url={originals} title="Netflix Orginals" />
-      <RowPost  url={action}  title="Action Movies" isSmall />
-      <RowPost  url={comedy}  title="Comedy Movies" isSmall />
-      <RowPost  url={horror}  title="Horror Movies" isSmall />
-      <RowPost  url={romance}  title="Romantic Movies" isSmall />
-      <RowPost  url={documentaries}  title="Documentaries" isSmall />
-      <Foot/>
+      
+      <Router>
+
+        <Route path='/' exact>
+          <MainPage />
+        </Route>
+        
+        <Route path='/home'>
+          <HomePage />
+        </Route>
+     
+      </Router>
+      
     </div>
   )
 }

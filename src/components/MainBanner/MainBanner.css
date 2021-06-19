@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+.banner{
+   position: relative;
+    background-size: cover;
+    height: 700px;
+    color:white;
+   
+    background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/c0a32732-b033-43b3-be2a-8fee037a6146/2fe6e3c0-5613-4625-a0c1-3d605effd10b/IN-en-20210607-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+      
+    border-bottom: 8px solid #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .center{
+  
+     display: flex;
+     flex-direction: column;
+     /* background: red; */
+     width: 950px;
+     height: 500px;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 23px;
+ }
+ .main-heading{
+     text-align: center;
+    
+ }
+ .main-heading h1{
+     font-size: 3.125rem;
+     line-height: 55px;
+ }
+.sub-heading h2{
+    margin: 16px;
+    word-spacing: 4px;
+    font-size: 1.625rem;  
+    font-weight: 600;
+}
+.small-heading h3{
+    font-weight: 500;
+    margin-top: 21px;
+}
+
+.main-form{
+    display: flex;
+    justify-content: space-between;
+  
+  overflow: hidden;
+  width: 652px;
+  margin-top: 44px;
+  
+}
+
+.input-field{
+ 
+    flex: 4;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    
+}
+.input-btn{
+    
+    flex: 2;
+    width: auto;
+   
+}
+.input-field input{
+    width: 100%;
+    height: 70%;
+    padding-left:10px ; 
+    border: none;
+}
+.main-form .input-field input:focus{
+    border: green;   
+    outline: none;
+}
+.input-btn button{
+   flex: 1;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 33px;
+    padding-right: 33px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.input-btn span{
+    font-size: 1.625rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+    width: 168px;
+}
+.input-btn span::after{
+    content: '\00bb';   
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+ .input-btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .input-btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+.input-btn:hover{
+    cursor: pointer;
+}
+
+
+
+
+
+
