@@ -4,6 +4,7 @@ import HomePage from './Pages/Home/Home';
 import MainPage from './Pages/Main/Main';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SignupPage from './Pages/SignUp/Signup';
+import LoginPage from './Pages/Login/Login';
 
 
 
@@ -26,6 +27,10 @@ function App() {
 
         <Route path='/signup'>
           <SignupPage />
+        </Route>
+
+        <Route path='/login'>
+          <LoginPage />
         </Route>
      
       </Router>
