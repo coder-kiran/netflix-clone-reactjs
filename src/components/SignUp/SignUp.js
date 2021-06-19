@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './SignUp.css'
+import { Firebase } from '../../firebase/firebase'
 function SignUp() {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
@@ -21,11 +22,26 @@ function SignUp() {
 
     const handleSignUp =(e) =>{
         e.preventDefault()
+       
+        Firebase.auth().createUserWithEmailAndPassword(username,password).then((result)=>{
+            result.user.updateProfile({displayName:username}).then(()=>{
+                Firebase.firestore().collection('users').add({
+                    username,
+                    password,
+                    id:result.user.uid
+                })
+            })
+        })
+
     }
 
     return (
         <div className="signup-parent">
             <div className="signup-rectangle">
+                <div className="signup-header">
+                <h2>Sign Up</h2>
+                </div>
+               
                 <form>
                     <div className="signup-input">
                         
@@ -69,7 +85,7 @@ function SignUp() {
                        
                     </div>
                     <div className="signup-footer">
-                        <p>I Am footer</p>
+                        <p>Already have a Netflix account ? Sign in now.</p>
                     </div>
                 </form>
             </div>
