@@ -3,7 +3,7 @@ import './App.css';
 import HomePage from './Pages/Home/Home';
 import MainPage from './Pages/Main/Main';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Tsting from './components/Tsiting/Tsting';
+import SignupPage from './Pages/SignUp/Signup';
 
 
 
@@ -22,6 +22,10 @@ function App() {
         
         <Route path='/home'>
           <HomePage />
+        </Route>
+
+        <Route path='/signup'>
+          <SignupPage />
         </Route>
      
       </Router>

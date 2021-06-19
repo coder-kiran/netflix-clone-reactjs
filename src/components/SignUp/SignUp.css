@@ -1,0 +1,24 @@
+.signup-parent{
+    height: 100vh;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.signup-rectangle{    
+    background: green;
+    width: 450px;
+    height: 602px;
+    margin-top: 136px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.signup-input{
+    background: red;
+    display: flex;
+    flex-direction: column;
+}
+.signup-footer{
+    background: yellow;
+}
