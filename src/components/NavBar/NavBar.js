@@ -33,7 +33,7 @@ function NavBar({ user }) {
 
             <div className="navbar-right">
                 <div className="username"> 
-                     <h4>{user ? user.displayName : "non user"}</h4> 
+                     <h4>{user ? user.displayName : "I know you.."}</h4> 
                  </div> 
                  <div className="user-avatar"> 
                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="avatar" /> 
