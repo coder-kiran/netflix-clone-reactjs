@@ -1,7 +1,10 @@
 import React,{useState} from 'react'
 import './Login.css'
 import { Firebase} from '../../firebase/firebase'
+import {useHistory} from 'react-router-dom'
 function Login() {
+    
+    const history = useHistory()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -17,7 +20,10 @@ function Login() {
       
         e.preventDefault()
         console.log("email heloooo");
-        Firebase.auth().signInWithEmailAndPassword(email,password)
+        Firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
+            history.push('/home')
+        })
+
     }
 
     return (

@@ -37,7 +37,7 @@ function SignUp() {
                 })
             }).catch((err)=>{console.log("error in add firestore",err)})
         }).then(()=>{
-            history.push('/home')
+            history.push('/login')
         })
 
     }

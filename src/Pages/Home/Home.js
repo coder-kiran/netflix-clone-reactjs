@@ -5,10 +5,11 @@ import Foot from '../../components/Foot/Foot';
 import {originals,action, comedy, horror, romance, documentaries} from '../../urls'
 import NavBar from '../../components/NavBar/NavBar';
 
-function HomePage() {
+function HomePage({user}) {
+    console.log("USER HOME",user);
     return (
         <div className="home">
-            <NavBar />           
+            <NavBar user={user} />           
             <Banner />
             <RowPost url={originals} title="Netflix Orginals" />
             <RowPost url={action} title="Action Movies" isSmall />

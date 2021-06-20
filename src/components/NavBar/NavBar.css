@@ -36,7 +36,7 @@ justify-content: flex-end;
 }
 .username{
     height: 100%;
-    width: 85px;
+    min-width: 100px;
     /* background: orangered;    */
     display: flex;
     align-items: center;

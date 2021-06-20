@@ -29,7 +29,7 @@ function App() {
         </Route>
         
         <Route path='/home'>
-          <HomePage />
+          <HomePage user={user} />
         </Route>
 
         <Route path='/signup'>
