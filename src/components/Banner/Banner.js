@@ -31,15 +31,18 @@ function Banner() {
      }
 
     return (
-        <div style={{backgroundImage:`url(${movie? imageUrl+movie.backdrop_path :""})`}} className="banner">      
+        <div style={{backgroundImage:`url(${movie? imageUrl+movie.backdrop_path :""})`}} className="banner"> 
+            
             <div className="content">
                 {/* after the component get loaded useeffect will not work. */}
+
                 <h1 className="title">{movie?movie.title:""}</h1> 
                 <div className="banner_buttons">
                     <button className="button">Play</button>
                     <button className="button">My list</button>
                 </div>
                 <h1 className="description">{movie?truncate(movie.overview,150):""}</h1>
+                
             </div>
             <div className="fade_bottom"></div>
         </div>

@@ -5,20 +5,27 @@ import MainPage from './Pages/Main/Main';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SignupPage from './Pages/SignUp/Signup';
 import LoginPage from './Pages/Login/Login';
-
-
-
+import { useState } from 'react';
+import { useEffect } from 'react';
+import {Firebase} from './firebase/firebase'
 
 
 
 function App() {
+  const [user, setUser] = useState("")
+  useEffect(() => {
+    Firebase.auth().onAuthStateChanged((user)=>{
+      setUser(user)
+    })
+    
+  }, [])
   return (
     <div className="app">
       
       <Router>
 
         <Route path='/' exact>
-          <MainPage />
+          <MainPage user={user} />
         </Route>
         
         <Route path='/home'>

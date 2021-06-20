@@ -6,7 +6,7 @@ import './Login.css'
 function LoginPage() {
     return (
         <div className="login-page">
-            <NavBar/>
+          
             <Login/>
             <Foot/>
         </div>

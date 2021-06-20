@@ -1,7 +1,12 @@
 import React,{useState} from 'react'
+import {useHistory} from 'react-router-dom'
 import './SignUp.css'
 import { Firebase } from '../../firebase/firebase'
+
 function SignUp() {
+
+    const history = useHistory()
+
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -23,14 +28,16 @@ function SignUp() {
     const handleSignUp =(e) =>{
         e.preventDefault()
        
-        Firebase.auth().createUserWithEmailAndPassword(username,password).then((result)=>{
+        Firebase.auth().createUserWithEmailAndPassword(email,password).then((result)=>{
             result.user.updateProfile({displayName:username}).then(()=>{
                 Firebase.firestore().collection('users').add({
                     username,
-                    password,
+                    phone,
                     id:result.user.uid
                 })
-            })
+            }).catch((err)=>{console.log("error in add firestore",err)})
+        }).then(()=>{
+            history.push('/home')
         })
 
     }

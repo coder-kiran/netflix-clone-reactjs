@@ -7,8 +7,8 @@ import NavBar from '../../components/NavBar/NavBar';
 
 function HomePage() {
     return (
-        <div>
-            <NavBar />
+        <div className="home">
+            <NavBar />           
             <Banner />
             <RowPost url={originals} title="Netflix Orginals" />
             <RowPost url={action} title="Action Movies" isSmall />

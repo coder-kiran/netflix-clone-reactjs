@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import './Login.css'
+import { Firebase} from '../../firebase/firebase'
 function Login() {
 
     const [email, setEmail] = useState('')
@@ -13,8 +14,10 @@ function Login() {
     }
 
     const handleSignIn = (e) =>{
+      
         e.preventDefault()
-
+        console.log("email heloooo");
+        Firebase.auth().signInWithEmailAndPassword(email,password)
     }
 
     return (
@@ -24,7 +27,7 @@ function Login() {
                 <h2>Sign In</h2>
                 </div>
                
-                <form>
+                <form  onSubmit={handleSignIn}>
                     <div className="login-input">                    
                       
                         <input 
@@ -42,7 +45,7 @@ function Login() {
                           />                      
 
                        
-                    <button onClick={handleSignIn}>Sign In </button>
+                    <button>Sign In </button>
                        
                     </div>
                     <div className="signup-footer">

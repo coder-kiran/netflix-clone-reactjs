@@ -3,7 +3,7 @@ import './MainBanner.css'
 function MainBanner() {
     return (
         <div>
-            <div className="banner">
+            <div className="main-banner">
                 
               
                   <div className="center">

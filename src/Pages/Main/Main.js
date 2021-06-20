@@ -1,14 +1,14 @@
 import React from 'react'
-import NavBar from '../../components/NavBar/NavBar'
 import Foot from '../../components/Foot/Foot'
 import MainBanner from '../../components/MainBanner/MainBanner'
 import RowAdvertisement from '../../components/RowAdvertisement/RowAdvertisement'
 import 'react-bootstrap'
 import {firstImage,firstVideo,secondImage,secondVideo} from '../../urls'
-function MainPage() {
+import NavbarMain from '../../components/NavbarMain/NavbarMain'
+function MainPage({user}) {
     return (
         <div className="main-page">
-             <NavBar />
+            <NavbarMain/>
              <MainBanner />
              <RowAdvertisement
               title="Enjoy on your TV."

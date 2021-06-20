@@ -6,7 +6,7 @@ import './Signup.css'
 function SignupPage() {
     return (
         <div className="signup-page">
-            <Navbar/>
+           
             <SignUp/>
             <Foot/>
         </div>
