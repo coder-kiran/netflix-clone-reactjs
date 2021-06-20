@@ -17,11 +17,11 @@
 .nav-black{
     background: #111;    
 }
-.logo{
-    position: fixed;
-    left: 20px;  
+.navbarMain-logo{
+   
+    
     width:80px;    
-    object-fit: contain;    
+    /* object-fit: contain;     */
     height: 36px;
     width: 134px;
     
@@ -31,4 +31,15 @@
     right: 20px;    
     width: 30px;  
     object-fit: contain;  
+}
+.signIn{
+    height: 32px;
+    width: 83px;   
+    border-radius: 4px;
+    border: none;
+    background: #e50914;
+    color: #fff;
+    font-size: 16px;
+    
+    text-align: center;
 }

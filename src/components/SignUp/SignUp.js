@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {useHistory} from 'react-router-dom'
+import {useHistory,Link} from 'react-router-dom'
 import './SignUp.css'
 import { Firebase } from '../../firebase/firebase'
 
@@ -92,7 +92,7 @@ function SignUp() {
                        
                     </div>
                     <div className="signup-footer">
-                        <p>Already have a Netflix account ? Sign in now.</p>
+                        <p>Already have a Netflix account ? <Link to='/login' style={{ textDecoration: 'none' }}>Sign in</Link>  now.</p>
                     </div>
                 </form>
             </div>

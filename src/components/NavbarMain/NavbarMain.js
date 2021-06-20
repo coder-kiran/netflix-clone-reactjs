@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import   './NavbarMain.css'
 import {Firebase} from '../../firebase/firebase'
+import {useHistory} from 'react-router-dom'
 function NavbarMain() {
+    const history = useHistory()
     const [navshow, setNavShow] = useState(false)
    
    
@@ -15,7 +17,7 @@ function NavbarMain() {
             }
         })
         return () => {
-            window.removeEventListener("scroll")
+            window.removeEventListener("scroll",null)
         }
     }, [])
 
@@ -23,9 +25,11 @@ function NavbarMain() {
     return (
         <div className={`navbarr ${navshow && "nav-black"}`} >
            
-            <img className="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="netflix logo" />
+            <img className="navbarMain-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="netflix logo" />
             
-          
+            <button onClick={()=>{
+                history.push('/login')
+            }} className="signIn">Sign In</button>
            
         </div>
     )

@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import './Login.css'
 import { Firebase} from '../../firebase/firebase'
-import {useHistory} from 'react-router-dom'
+import {useHistory,Link} from 'react-router-dom'
 function Login() {
     
     const history = useHistory()
@@ -55,7 +55,7 @@ function Login() {
                        
                     </div>
                     <div className="signup-footer">
-                        <p>New to Netflix? Sign up now.</p>
+                        <p>New to Netflix?  <Link to='/signup' style={{ textDecoration: 'none' }}>Sign up</Link> now.</p>
                     </div>
                 </form>
             </div>
