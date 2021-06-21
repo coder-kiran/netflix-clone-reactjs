@@ -48,7 +48,7 @@ function RowPost(props) {
     }
 
     return (
-        <div className="row">
+        <div className="row-post">
             <h2>{props.title}</h2>
             <div className="posters">
                 {/* iterating through each object in the rowpost */}
