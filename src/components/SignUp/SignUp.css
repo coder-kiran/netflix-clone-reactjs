@@ -10,11 +10,11 @@
     background:  rgba(0,0,0,.75);
     width: 450px;
     height: 602px;
-    margin-top: 136px;
+    margin-top: 196px;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    padding:50px 60px ;
+    padding:50px 33px ;
 }
 .signup-header{
     margin-bottom: 25px;

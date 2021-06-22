@@ -1,6 +1,6 @@
 .login-page{
     background: black;
-    height: 115vh;
+    min-height: 115vh;
 
     background-image: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
     url('https://assets.nflxext.com/ffe/siteui/vlv3/b8e09d9c-d1e7-4800-afd9-810e41ace684/8880c9e7-62d3-4cb3-9da1-8f020fd4fa37/IN-en-20210607-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
