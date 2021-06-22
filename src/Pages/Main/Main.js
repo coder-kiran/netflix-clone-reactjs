@@ -16,17 +16,17 @@ function MainPage({user}) {
               subtitle="Watch on smart TVs, PlayStation, Xbox,Chromecast, Apple TV, Blu-ray players and more."
               commonImage={firstImage}
               commonVideo={firstVideo}
-               isLeft/>
+               isLeft/> */}
 
-             <RowAdvertisement
+             {/* <RowAdvertisement
              title="Watch everywhere."
              subtitle="Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV."
               commonImage={secondImage}
                commonVideo={secondVideo}
                isSecondRow
                 />          
-
-             <Foot /> */}
+                */}
+             <Foot /> 
              
         </div>
     )

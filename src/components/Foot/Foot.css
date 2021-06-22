@@ -1,26 +1,26 @@
 .footer-div-wrapper{
-    height: 350px;
+    min-height: 350px;
     width: 100%;
     padding: 55px 45px ;
     background: black;
     margin-top: 90px;
 }
 .footer-child{
-    height: 250px;
+    min-height: 250px;
     width: 100%;
 }
 .footer-head{
     
-    margin-left: 80px;
+    margin-left: 26px;
     font-size: 16px;
     color: #757575;
     padding: 10px;
- 
+    text-align: start;
 }
 .footer-lists{
     display: flex;
     justify-content: space-evenly;
-    
+    flex-wrap: wrap;
 }
 .list{
    color: #757575;
