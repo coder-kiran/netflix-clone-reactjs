@@ -7,6 +7,7 @@ import Youtube from 'react-youtube'
 function RowPost(props) {
     const [movies, setMovies] = useState([])
     const [urlid, setUrlid] = useState('')
+    const [myLists, setMyLists] = useState([])
     useEffect(() => {
         console.log('row post');
         axios.get(props.url)
@@ -31,20 +32,20 @@ function RowPost(props) {
         axios.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response => {
             console.log("handle movie");
             console.log(response.data.results[0].key)
-            console.log("urlid state:- ",urlid);
+            console.log("urlid state:- ", urlid);
             if (response.data.results.length !== 0) {
-                if(urlid){
+                if (urlid) {
                     setUrlid("")
-                }else{
+                } else {
                     setUrlid(response.data.results[0])
                 }
-                
-               
-                
+
+
+
             } else {
                 console.log('array empty')
             }
-        }).catch((err)=>{console.log("Error",err)})
+        }).catch((err) => { console.log("Error", err) })
     }
 
     return (
@@ -55,16 +56,22 @@ function RowPost(props) {
 
                 {
                     movies.map((obj) =>
-                        <img onClick={() => handleMovie(obj.id)} 
-                        key={obj.id}
-                        className={props.isSmall ? "small-poster" : "big-poster"} 
-                        src={`${imageUrl}${props.isSmall ? obj.backdrop_path : obj.poster_path}`} alt={obj.title} />
+
+                        <div className="row-images">
+                            <img onClick={() => handleMovie(obj.id)} key={obj.id}
+                                className={props.isSmall ? "small-poster" : "big-poster"}
+                                src={`${imageUrl}${props.isSmall ? obj.backdrop_path : obj.poster_path}`}
+                                alt={obj.title} />
+                            <button onClick={addToList(obj.id)}>add</button>
+                        </div>
+
+
                     )
                 }
 
 
             </div>
-            { urlid && <Youtube opts={opts} videoId={urlid.key} />}
+            {urlid && <Youtube opts={opts} videoId={urlid.key} />}
         </div>
     )
 }
