@@ -25,7 +25,7 @@ function NavBar({ user }) {
 
     console.log("USER",user);
     return (
-        <div className={`navbarr ${navshow && "nav-black"}`} >
+        <div className={`navbarr-home ${navshow && "nav-black"}`} >
             <div className="netflixlogo">
                  <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png" alt="netflix logo" /> 
             </div>

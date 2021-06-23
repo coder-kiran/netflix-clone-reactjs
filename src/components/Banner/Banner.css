@@ -71,3 +71,17 @@
     height: 7.4rem;
     background-image: linear-gradient(180deg,transparent,rgba(0, 0, 0, 0.71),rgb(0, 0, 0));
 }
+
+
+@media (max-width:350px) {
+    .content{
+        margin-bottom: 77px;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .description{
+        width: 16rem;
+        padding: 1rem;
+    }
+}
