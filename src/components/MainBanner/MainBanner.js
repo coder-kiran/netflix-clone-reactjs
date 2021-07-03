@@ -1,8 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './MainBanner.css'
 import 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {useHistory} from 'react-router-dom'
 function MainBanner() {
+    const history = useHistory() 
+    const [email, setEmail] = useState("sdfsdfdf")
     return (
         <div>
             <div className="main-banner ">
@@ -26,7 +29,9 @@ function MainBanner() {
                                 />
                             </div>
                             <div className="input-btn ">
-                                <button><span>Get Started</span></button>
+                                <button onClick={()=>{
+                                    history.push('/signup',{email:email})
+                                }}><span>Get Started</span></button>
                             </div>
                         </div> 
                     </div>

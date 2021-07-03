@@ -2,10 +2,14 @@ import React,{useState} from 'react'
 import {useHistory,Link} from 'react-router-dom'
 import './SignUp.css'
 import { Firebase } from '../../firebase/firebase'
+import { useLocation } from "react-router-dom";
+
 
 function SignUp() {
 
     const history = useHistory()
+    const location = useLocation();
+    const myparam = location.email
 
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
@@ -48,7 +52,8 @@ function SignUp() {
                 <div className="signup-header">
                 <h2>Sign Up</h2>
                 </div>
-               
+                <h1>Hello{myparam}</h1>
+                               
                 <form>
                     <div className="signup-input">
                         

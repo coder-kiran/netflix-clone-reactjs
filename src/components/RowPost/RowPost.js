@@ -7,7 +7,6 @@ import Youtube from 'react-youtube'
 function RowPost(props) {
     const [movies, setMovies] = useState([])
     const [urlid, setUrlid] = useState('')
-    const [myLists, setMyLists] = useState([])
     useEffect(() => {
         console.log('row post');
         axios.get(props.url)
@@ -62,7 +61,6 @@ function RowPost(props) {
                                 className={props.isSmall ? "small-poster" : "big-poster"}
                                 src={`${imageUrl}${props.isSmall ? obj.backdrop_path : obj.poster_path}`}
                                 alt={obj.title} />
-                            <button onClick={addToList(obj.id)}>add</button>
                         </div>
 
 
