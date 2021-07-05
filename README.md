@@ -1,4 +1,4 @@
-App Link :- https://kknetflixclone.web.app/
+App Link :- 
 
 #About This
 This is a netflix-clone developed using react js
